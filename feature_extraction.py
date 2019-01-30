@@ -289,7 +289,7 @@ for key,outPath in zip(keys,files_output):
   table_grouped_split(inPath=usrlog_file, outPath=outPath, key=key)
 #====================
 print("Category Feature Extract...")
-train_file = './data/test_format1.csv'
+train_file = './data/train_format1.csv'
 train_read = pd.read_csv(train_file)
 
 cate_feat = {}
