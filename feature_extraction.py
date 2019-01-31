@@ -250,14 +250,14 @@ def usr_statistic(filename, usr_gender_age_range_all, usr_dict, usr_info_read):
     sll = usr_gender_age_range_all.query('user_id == @usr_id')
     asd = usr_info_read.query('user_id == @usr_id')
     
-    if np.all(pd.isna(asd.age_range)):
+    try:
         age_range = sll.age_range.mode()[0]
-    else:
+    except:
         age_range = asd.age_range.mode()[0]
     
-    if np.all(pd.isna(asd.gender)):
+    try:
         gender = sll.gender.mode()[0]
-    else:
+    except:
         gender = asd.gender.mode()[0] 
         
     usr_dict[str(usr_id)] = [usr_buy_days, num_repeatedbuy, num_buys, num_collect, num_cart, usr_click_days,age_range,gender]
