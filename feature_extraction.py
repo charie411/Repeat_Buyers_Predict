@@ -300,7 +300,7 @@ cate_file = "./data/feature/feat_cate.pytmp"
 pickle.dump(obj=cate_feat, file=open(cate_file,"wb"))
 #====================
 print("Seller Feature Extract...")
-usr_info_file = './data/usr_info_format1.csv'
+usr_info_file = './data/user_info_format1.csv'
 usr_info_read = pd.read_csv(usr_info_file)
 
 #read cate feature from dict_cate file
